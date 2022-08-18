@@ -1,11 +1,85 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiant Legends</title>
+    <link rel="shortcut icon" href="assets/logo_icon.png" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7defa49759.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-  
+    <header>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="/"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-circle-user"></i>About</a></li>
+                <li><a href="#resume"><i class="fa-solid fa-file-lines"></i>Resume</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+            </ul>
+            <a href="#" id="navIcon"><img src="assets/icon_hamburger.svg" alt=""></a>
+        </nav>
+    </header>
+    <main>
+        <article class="profile">
+            <img src="assets/bg_profile.svg" alt="">
+            <section>
+                <div class="profile-image">
+                    <img src="" alt="">
+                </div>
+                <h1>Kimberly Shirley</h1>
+                <p class="highlight">Web Designer</p>
+                <p><a href="assets/resume.pdf" target="_blank">Download Resume (.pdf) <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+            </section>
+        </article>
+        <article class="details scroll-top">
+            <section>
+                <h2>About Me</h2>
+                <p>My name is Kimberly Shirley, a web designer located in Greenville, South Carolina. I have a degree in Digital Media and several years of experience with web site design and development. I am also familiar with WordPress customization and Squarespace web sites. I’d love to work with you!</p>
+            </section>
+            <section>
+                <h2>My Skills</h2>
+                <div class="skills">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS/Sass</li>
+                        <li>Javascript</li>
+                    </ul>
+                    <ul>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>Figma</li>
+                    </ul>
+                    <ul>
+                        <li>WordPress</li>
+                        <li>Squarespace</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="services">
+                <h2>My Services</h2>
+                <div>
+                    <img src="assets/icon_html.svg" alt="">
+                    <h3>Web Development</h3>
+                    <p>WordPress, Squarespace, or custom websites made using HTML/CSS/Javascript. Modern, mobile-friendly, and ready for your targeted audience.</p>
+                </div>
+                <div>
+                    <img src="assets/icon_artistic.svg" alt="">
+                    <h3>Creative Design</h3>
+                    <p>Logos, graphics, and photo edits created using Adobe Photoshop or Illustrator. Optimized for online use to improve speed and functionality.</p>
+                </div>
+                <div>
+                    <img src="assets/icon_seo.svg" alt="">
+                    <h3>SEO</h3>
+                    <p>Best practices of Search Engine Optimization helps get your website to rank higher on popular search engines, such as Google, to expand your reach.</p>
+                </div>
+            </section>
+        </article>
+    </main>
 </body>
 </html>
