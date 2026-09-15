@@ -181,7 +181,24 @@ ul > li::marker {
     padding-bottom: 10px;
 }
 
+/* -- Services -- */
+
+.service-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-title h3 {
+    margin: 0;
+}
+
+.service-description {
+    margin: 0;
+}
+
 /* -- Resume -- */
+
 .experience-item ul {
     list-style-type: initial;
     padding-left: 3rem;
@@ -189,6 +206,7 @@ ul > li::marker {
 
 .experience-item ul li {
     margin: 0;
+    padding: 0;
 }
 
 .business {
@@ -324,6 +342,3 @@ ul > li::marker {
     }
 
 }
-
-/* -- Medium Screens -- */
-
