@@ -42,6 +42,14 @@ h2 {
     text-transform: uppercase;
 }
 
+h3 {
+    margin: 0 0 1rem;
+}
+
+h4 {
+    margin: 0 0 0.25rem;
+}
+
 p {
     color: var(--dark-gray);
 }
@@ -171,6 +179,25 @@ ul > li::marker {
 
 .details section div {
     padding-bottom: 10px;
+}
+
+/* -- Resume -- */
+.experience-item ul {
+    list-style-type: initial;
+    padding-left: 3rem;
+}
+
+.experience-item ul li {
+    margin: 0;
+}
+
+.business {
+    padding: 0 !important;
+    margin-bottom: 0.25rem;
+}
+
+.timeframe {
+    font-style: italic;
 }
 
 /* -- Desktop -- */
