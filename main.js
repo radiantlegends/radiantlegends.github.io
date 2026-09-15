@@ -14,6 +14,21 @@ function toggleMobileMenu() {
     }
 }
 
+const navItems = document.querySelectorAll("#navLinks li");
+const sections = document.querySelectorAll(".content-section");
+
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        const target = item.dataset.target;
+
+        sections.forEach(section => {
+            section.classList.remove("active");
+        });
+
+        document.getElementById(target).classList.add("active");
+    });
+});
+
 /* Scrollbar */
 
 const details = document.querySelector('.details');

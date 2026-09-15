@@ -30,6 +30,7 @@ main section {
 }
 
 /* -- Typography -- */
+
 h1 {
     font-size: 3.2rem;
     font-weight: 800;
@@ -118,6 +119,11 @@ nav ul li a i {
     border-radius: 50%;
 }
 
+.profile-image img {
+    width: 100%;
+    border-radius: 50% !important;
+}
+
 .profile .highlight {
     font-size: 1.8rem;
     color: var(--highlight);
@@ -127,7 +133,22 @@ nav ul li a i {
     display: inline-block;
 }
 
+/* -- Content -- */
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
 /* -- Details -- */
+
+.details {
+    width: 600px;
+    height: 500px;
+}
 
 .details ul {
     margin: 0;
