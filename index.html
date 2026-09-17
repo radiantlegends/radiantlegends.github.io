@@ -4,131 +4,151 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiant Legends</title>
+    <meta name="description" content="Kimberly Shirley is a frontend developer based in Greenville, South Carolina.">
+    <title>Kimberly Shirley | Frontend Developer</title>
     <link rel="shortcut icon" href="assets/logo_icon.png" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7defa49759.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav>
             <ul id="navLinks">
-                <li data-target="home"><a href="#"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
-                <li data-target="about"><a href="#"><i class="fa-solid fa-circle-user"></i>About</a></li>
-                <li data-target="resume"><a href="#"><i class="fa-solid fa-file-lines"></i>Resume</a></li>
-                <li data-target="contact"><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+                <li><a href="#home" aria-current="page"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-circle-user"></i>About</a></li>
+                <li><a href="#resume"><i class="fa-solid fa-file-lines"></i>Resume</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
             </ul>
-            <a href="#" id="navIcon"><img src="assets/icon_hamburger.svg" alt=""></a>
+
+            <button type="button" id="navIcon" class="nav-toggle" aria-controls="navLinks" aria-expanded="false" aria-label="Open Navigation">
+                <img src="assets/icon_hamburger.svg" alt="">
+            </button>
         </nav>
     </header>
+
     <main>
         <article class="profile">
-            <img src="assets/bg_profile.svg" alt="">
-            <section>
-                <div class="profile-image">
-                    <img src="assets/archery.jpg" alt="">
+            <img class="profile-background" src="assets/bg_profile.svg" alt="">
+            <div class="profile-image">
+                <img src="assets/archery.jpg" alt="">
+            </div>
+            <section class="profile-container">
+                <h1 class="profile-name">Kimberly Shirley</h1>
+                <div class="profile-title">Frontend Developer</div>
+                <div>
+                    <a href="assets/resume.pdf" target="_blank" rel="noopener">
+                        Download Resume (.pdf) <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                 </div>
-                <h1>Kimberly Shirley</h1>
-                <p class="highlight">Frontend Developer</p>
-                <p><a href="assets/resume.pdf" target="_blank">Download Resume (.pdf) <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
             </section>
         </article>
-        <article class="details scroll-top">
-            <div id="home" class="content-section active">
-                <section>
+        
+        <article class="content scroll-top">
+            <section id="home" class="content-section active">
+                <div class="content-container">
                     <h2>About Me</h2>
                     <p>I’m Kimberly Shirley, a frontend developer based in Greenville, South Carolina. I specialize in building clean, responsive interfaces, dashboard systems, and thoughtful UI architecture. My work blends technical precision with clear visual structure, and I enjoy designing systems that scale — from CSS variable frameworks to Firebase‑driven applications.</p>
-                </section>
-                <section>
-                    <h2>My Skills</h2>
-                    <div class="skills">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS/Sass</li>
-                            <li>Javascript</li>
-                        </ul>
-                        <ul>
-                            <li>Photoshop</li>
-                            <li>Illustrator</li>
-                            <li>Figma</li>
-                        </ul>
-                        <ul>
-                            <li>Firebase</li>
-                            <li>Responsive Design</li>
-                            <li>UI Architecture</li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="services">
-                    <h2>My Services</h2>
-                    <div class="service">
-                        <div class="service-title">
-                            <img src="assets/icon_html.svg" alt="">
-                            <h3>Frontend Dev</h3>
-                        </div>
-                        <p class="service-description">Clean, responsive interfaces built with modern HTML, CSS/Sass, and JavaScript. Structured, accessible, and optimized for real‑world use.</p>
-                    </div>
-                    <div class="service">
-                        <div class="service-title">
-                            <img src="assets/icon_ui.svg" alt="">
-                            <h3>UI/UX Design</h3>
-                        </div>
-                        <p class="service-description">Thoughtful interface layouts created in Figma, focused on clarity, usability, and visual balance across devices.</p>
-                    </div>
-                    <div class="service">
-                        <div class="service-title">
-                            <img src="assets/icon_artistic.svg" alt="">
-                            <h3>Creative Design</h3>
-                        </div>
-                        <p class="service-description">Logos, graphics, and photo edits crafted in Photoshop or Illustrator. Polished visuals that support your brand identity.</p>
-                    </div>
-                    <div class="service">
-                        <div class="service-title">
-                            <img src="assets/icon_seo.svg" alt="">
-                            <h3>Data Visualization</h3>
-                        </div>
-                        <p class="service-description">Custom dashboards and charts built with Chart.js and Firebase. Clear, intuitive displays that make complex data easy to understand.</p>
-                    </div>
-                </section>
-            </div>
+                </div>
 
-            <div id="about" class="content-section">
-                <section>
+                <div class="content-container">
+                    <h2>My Skills</h2>
+                    <ul class="skills">
+                        <li>HTML</li>
+                        <li>CSS/Sass</li>
+                        <li>Javascript</li>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>Figma</li>
+                        <li>Firebase</li>
+                        <li>Responsive Design</li>
+                        <li>UI Architecture</li>
+                    </ul>
+                </div>
+
+                <div class="content-container">
+                    <h2>My Services</h2>
+                    
+                    <div class="services">
+                        <div class="service">
+                            <div class="service-title">
+                                <img class="service-icon" src="assets/icon_html.svg" alt="Circular icon with open and close brackets surrounding a forward slash">
+                                <h3>Frontend Dev</h3>
+                            </div>
+                            <p class="service-description">Clean, responsive interfaces built with modern HTML, CSS/Sass, and JavaScript. Structured, accessible, and optimized for real‑world use.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="service-title">
+                                <img class="service-icon" src="assets/icon_ui.svg" alt="Circular icon with three stacked lines">
+                                <h3>UI/UX Design</h3>
+                            </div>
+                            <p class="service-description">Thoughtful interface layouts created in Figma, focused on clarity, usability, and visual balance across devices.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="service-title">
+                                <img class="service-icon" src="assets/icon_artistic.svg" alt="Circular icon with a artist's palette and paintbrush">
+                                <h3>Creative Design</h3>
+                            </div>
+                            <p class="service-description">Logos, graphics, and photo edits crafted in Photoshop or Illustrator. Polished visuals that support your brand identity.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="service-title">
+                                <img class="service-icon" src="assets/icon_data.svg" alt="Circular icon with a magnifying glass inside of a gear">
+                                <h3>Data Visualization</h3>
+                            </div>
+                            <p class="service-description">Custom dashboards and charts built with Chart.js and Firebase. Clear, intuitive displays that make complex data easy to understand.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="content-section">
+                <div>
                     <h2>Who I Am</h2>
                     <p>I’m Kimberly "Kim" Shirley, a frontend developer based in Greenville, South Carolina. I specialize in building clean, responsive interfaces and thoughtful UI architecture. My work blends visual clarity with technical precision, and I enjoy creating systems that scale — from structured CSS layouts to data‑driven dashboards.</p>
                     <p>With a background in digital media and hands‑on technical support, I bring a practical understanding of how real‑world systems behave. That experience shapes the way I design and build interfaces: reliable, intuitive, and grounded in how users actually interact with technology.</p>
-                </section>
-                <section>
+                </div>
+
+                <div>
                     <h2>What I Do</h2>
                     <p>I focus on:</p>
                     <ul>
-                        <li>Frontend Development: HTML, CSS/Sass, JavaScript.</li>
-                        <li>UI Architecture: Scalable layout systems, CSS variables.</li>
-                        <li>Data Visualization: Dashboards and database integrations.</li>
-                        <li>UI/UX Design: Figma prototypes, responsive layouts.</li>
+                        <li><b>Frontend Development:</b> 
+                            HTML, CSS/Sass, JavaScript.</li>
+                        <li><b>UI Architecture:</b> 
+                            Scalable layout systems, CSS variables.</li>
+                        <li><b>Data Visualization:</b> 
+                            Dashboards and database integrations.</li>
+                        <li><b>UI/UX Design:</b> 
+                            Figma prototypes, responsive layouts.</li>
                     </ul>
                     <p>I enjoy solving structural problems, organizing information clearly, and designing interfaces that feel effortless to use.</p>
-                </section>
-                <section>
+                </div>
+
+                <div>
                     <h2>How I Work</h2>
                     <p>My approach is shaped by both design and technical troubleshooting: I think in systems and patterns, prioritize clarity and usability, then build interfaces that adapt across devices. I test and refine until the experience feels smooth and reliable.</p>
                     <p>Whether I’m designing a dashboard, structuring a layout, or debugging a tricky issue, I aim for solutions that are both elegant and practical.</p>
-                </section>
-                <section>
+                </div>
+
+                <div>
                     <h2>Outside of Work</h2>
                     <p>I spend a lot of my free time learning, when my weird dog permits.</p>
-                    <img src="assets/zephyr.jpg">
+                    <img src="assets/zephyr.jpg" alt="Zephyr, a green cheek conure, perched on a stand">
                     <p><b>This is Zephyr, the green cheek conure.</b> He loves screaming, walking across keyboards, and supervising me at all times. He’s very loud, opinionated, and absolutely convinced he’s helping.</p>
                     <p>Some of my other hobbies include video games, trading card games, Dungeons & Dragons, and occasionally archery.</p>
-                </section>
-                <section>
+                </div>
+
+                <div>
                     <h2>What I'm Looking For</h2>
                     <p>I’m always interested in opportunities involving frontend development, data‑driven interfaces, and structured systems. If you have a project or vision you want to bring to life, I’d love to connect and share ideas.</p>
-                </section>
-            </div>
+                </div>
+            </section>
 
             <section id="resume" class="content-section">
                 <div>
@@ -230,21 +250,23 @@
                 </div>
             </section>
 
-            <div id="contact" class="content-section">
-                <section>
+            <section id="contact" class="content-section">
+                <div>
                     <h2>Contact Me</h2>
                     <p>If you’d like to collaborate, ask questions, or talk about a project, feel free to reach out.</p>
-                    <div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:kimberlydawnshirley@gmail.com">kimberlydawnshirley@gmail.com</a></p>
-                    </div>
-                    <div>
-                        <h3>Media</h3>
-                        <p><a href="https://github.com/radiantlegends" target="_blank">GitHub</a></p>
-                        <p><a href="https://www.linkedin.com/in/kimberly-shirley-61615b122/" target="_blank">LinkedIn</a></p>
-                    </div>
-                </section>
-            </div>
+                </div>
+
+                <div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:kimberlydawnshirley@gmail.com">kimberlydawnshirley@gmail.com</a></p>
+                </div>
+
+                <div>
+                    <h3>Media</h3>
+                    <p><a href="https://github.com/radiantlegends" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+                    <p><a href="https://www.linkedin.com/in/kimberly-shirley-61615b122/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                </div>
+            </section>
         </article>
     </main>
 </body>

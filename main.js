@@ -1,51 +1,38 @@
-/* Navigation */
-
 const navIcon = document.getElementById('navIcon');
-navIcon.addEventListener('click', toggleMobileMenu);
-
-function toggleMobileMenu() {
-    const nav = document.getElementById('navLinks');
-    if(nav.style.display === 'grid') {
-        nav.style.display = 'none';
-        navIcon.style.top = '5vw';
-    } else {
-        nav.style.display = 'grid';
-        navIcon.style.top = 'calc(5vw + 54px)';
-    }
-}
-
-const navItems = document.querySelectorAll("#navLinks li");
+const navLinks = document.getElementById('navLinks');
+const navItems = document.querySelectorAll('#navLinks a');
 const sections = document.querySelectorAll(".content-section");
 
+function toggleMobileMenu() {
+    const isOpen = navLinks.classList.toggle('is-open');
+    navIcon.setAttribute('aria-expanded', isOpen);
+    navIcon.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+}
+
+navIcon.addEventListener('click', toggleMobileMenu);
+
 navItems.forEach(item => {
-    item.addEventListener("click", () => {
-        const target = item.dataset.target;
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        const target = item.getAttribute('href').slice(1);
 
         sections.forEach(section => {
-            section.classList.remove("active");
+            section.classList.toggle('active', section.id === target);
         });
 
-        document.getElementById(target).classList.add("active");
+        navItems.forEach(link => link.removeAttribute('aria-current'));
+        item.setAttribute('aria-current', 'page');
+        navLinks.classList.remove('is-open');
+        navIcon.setAttribute('aria-expanded', 'false');
+        navIcon.setAttribute('aria-label', 'Open navigation');
     });
 });
 
-/* Scrollbar */
-
 const details = document.querySelector('.details');
 details.addEventListener('scroll', () => {
-    const scroll = details.scrollTop;
+    const isAtTop = details.scrollTop === 0;
+    const isAtBottom = Math.ceil(details.scrollTop + details.clientHeight) >= details.scrollHeight;
 
-    if(scroll > 0) {
-        //scrollbar is not at the top
-        if(details.scrollHeight - scroll == details.offsetHeight) {
-            //scrollbar is at the bottom
-            details.className = 'details scroll-bottom';
-        } else {
-            //scrollbar is in the middle
-            details.className = 'details scroll-middle';
-        }
-    } else {
-        //scrollbar is at the top
-        details.className = 'details scroll-top';
-    }
+    details.classList.remove('scroll-top', 'scroll-middle', 'scroll-bottom');
+    details.classList.add(isAtTop ? 'scroll-top' : isAtBottom ? 'scroll-bottom' : 'scroll-middle');
 });
