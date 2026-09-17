@@ -173,7 +173,11 @@ nav ul li a i {
     display: flex;
 }
 
-.content-section p:not(:last-child), .content-section ul:not(:last-child), .content-section img:not(:last-child) {
+.content-container p:not(:first-child), .content-container ul:not(:first-child) {
+    margin-top: 0.75rem;
+}
+
+.content-container p:not(:last-child), .content-container ul:not(:last-child) {
     margin-bottom: 0.75rem;
 }
 
