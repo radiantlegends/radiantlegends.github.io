@@ -173,7 +173,7 @@ nav ul li a i {
     display: flex;
 }
 
-.content-container p:not(:first-child), .content-container ul:not(:first-child) {
+.content-container > p:not(:first-child), .content-container > ul:not(:first-child) {
     margin-top: 0.75rem;
 }
 
@@ -188,8 +188,6 @@ nav ul li a i {
 .content-section img {
     max-width: 100%;
 }
-
-.content-section 
 
 /* Home */
 
@@ -262,8 +260,8 @@ nav ul li a i {
     body {
         display: flex;
         gap: 12px;
-        max-width: 1024px;
-        max-height: 640px;
+        width: 1024px;
+        height: 640px;
         margin: auto;
     }
 
