@@ -199,6 +199,10 @@ nav ul li a i {
     list-style-type: '✓';
 }
 
+ul.skills {
+    margin-left: 0;
+}
+
 .skills > li { 
     padding-left: 0.5rem;
 }
