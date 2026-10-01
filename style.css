@@ -159,7 +159,7 @@ nav ul li a i {
 /* --- Content --- */
 
 .content {
-    padding: 1rem;
+    padding: 1.75rem;
     background: var(--color-background);
 }
 
@@ -255,14 +255,17 @@ nav ul li a i {
     html {
         height: 100vh;
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     body {
         display: flex;
+        justify-content: center;
         gap: 12px;
         width: 1024px;
         height: 640px;
-        margin: auto;
+        margin: 1rem;
     }
 
     main {
