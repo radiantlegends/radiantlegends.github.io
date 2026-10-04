@@ -8,7 +8,7 @@
     --color-accent: #359DD9;
     --radius: 0.5rem;
     --offset: 0.75rem 0;
-    --shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 /* --- Reset --- */
@@ -77,50 +77,34 @@ nav {
     background: var(--color-background);
     text-transform: uppercase;
     font-size: 0.75rem;
+    position: fixed;
+    bottom: 0;
+    box-shadow: var(--shadow);
 }
 
 nav ul {
     list-style-type: none;
-    display: none;
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 0.5rem;
     text-align: center;
-}
-
-nav ul.is-open {
-    display: grid;
 }
 
 nav ul li a {
     display: flex;
     flex-direction: column;
     padding: 1rem 0.5rem;
-    border-radius: var(--radius);
     color: inherit;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a[aria-current="page"] {
     background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
 }
 
 nav ul li a i {
     margin-bottom: 7px;
     font-size: 18px;
-}
-
-.nav-toggle {
-    place-items: center;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-}
-
-.nav-toggle[aria-expanded="true"] {
-    top: calc(1rem + 75px);
 }
 
 /* --- Profile --- */
@@ -161,6 +145,7 @@ nav ul li a i {
 .content {
     padding: 1.75rem;
     background: var(--color-background);
+    margin-bottom: 72px;
 }
 
 .content-section {
@@ -305,13 +290,17 @@ ul.skills {
     nav {
         border-radius: var(--radius);
         margin: var(--offset);
-        box-shadow: var(--shadow);
         padding: 0.5rem;
+        position: relative;
     }
 
     nav ul {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    nav ul li a {
+        border-radius: var(--radius);
     }
 
     /* --- Profile --- */
